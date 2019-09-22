@@ -1,0 +1,39 @@
+package 实验二;
+
+import java.util.Scanner;
+
+public class huiwen {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("输入一个1-9999之间的数：");
+		Scanner in = new Scanner(System.in);
+		int number;
+		int i=0;
+		int sum=0;
+		int count=0;
+		number = in.nextInt();
+		int record=number;
+		while(true)
+		{
+			i=number%10;
+			sum = sum*10+i;
+			number /= 10;
+			count++;
+			if(number==0)
+			{
+				break;
+			}
+		}
+		System.out.println("位数为:"+count);
+		if(sum==record)
+		{
+			System.out.println("是回文数");
+		}
+		else
+		{
+			System.out.println("不是回文数");
+		}
+		in.close();
+	}
+}
