@@ -1,0 +1,80 @@
+package 练习;
+
+public class Circle {
+	double radius,area;
+	
+	void setRadius(double r) {
+		radius = r;
+	}
+	
+	double getRadius() {
+		return radius;
+	}
+	
+	double getArea() {
+		area = 3.14*Math.pow(radius, 2);
+		return area;
+	}
+}//第一个类完成
+
+
+package 练习;
+
+public class Circular {
+
+	Circle bottom;
+	double height;
+	void setBottom(Circle c) {
+		bottom=c;
+	}
+	void setHeight(double h) {
+		height = h;
+	}
+	double getVolme() {
+		if(bottom==null) {
+			return -1;
+		}
+		else
+		{
+			return bottom.getArea()*height/3.0;
+		}
+	}
+	double getBottomRadius() {
+		return bottom.getRadius();
+	}
+	
+	public void setBottomRadius(double r) {
+		bottom.setRadius(r);
+	}
+	
+}//第二个类完成
+
+
+package 练习;
+
+public class Example4_8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Circle circle = new Circle();
+		circle.setRadius(10);
+		Circular circular = new Circular();
+		System.out.println("circle的引用："+circle);
+		System.out.println("圆锥的bottom的引用："+circular.bottom);
+		circular.setHeight(5);
+		circular.setBottom(circle);//代码4
+		System.out.println("circle的引用："+circle);
+		System.out.println("圆锥的bottom的引用："+circular.bottom);
+		System.out.println("圆锥的体积："+circular.getVolme());
+		System.out.println("修改circle的半径，bottom的半径同样变化");
+		circle.setRadius(20);
+		System.out.println("bottom的半径："+circular.getBottomRadius());
+		System.out.println("重新穿件circle，circle的引用会发生变化");
+		circle = new Circle();
+		System.out.println("circle的引用："+circle);
+		System.out.println("但是不影响circular的bottoman的引用");
+		System.out.println("圆锥的bottom的引用："+circular.bottom);
+	}//of main
+
+}//主类完成
+
