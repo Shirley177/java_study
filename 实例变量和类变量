@@ -1,0 +1,39 @@
+package lader;
+
+public class Lader {
+	double 上底;			//实例变量
+	double 高;			//类变量
+	static double 下底;
+	void 设置上底(double a) {
+		上底 = a;
+	}
+	void 设置下底(double b) {
+		下底 = b;
+	}	
+	double 获取上底() {
+		return 上底;
+	}
+	double 获取下底() {
+		return 下底;
+	}	
+}
+
+package lader;
+
+public class Example4_5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Lader.下底=100;
+		Lader laderOne = new Lader();
+		Lader laderTwo = new Lader();
+		laderOne.设置上底(28);
+		laderTwo.设置上底(66);
+		System.out.println("laderOne的上底："+laderOne.获取上底());
+		System.out.println("laderOne的下底："+laderOne.获取下底());
+		System.out.println("laderTwo的上底："+laderTwo.获取上底());
+		System.out.println("laderTwo的下底："+laderTwo.获取下底());	
+		
+	}
+
+}
