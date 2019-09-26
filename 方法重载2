@@ -1,0 +1,65 @@
+package 练习;
+
+public class Circle {
+	double radius;
+	double area;
+	void setRadius(double r) {
+		radius = r;
+	}
+	double getArea() {
+		area = 3.14*Math.pow(radius, 2);
+		return area;
+	}
+
+}
+
+package 练习;
+
+public class Tixing {
+	double above;
+	double bottom;
+	double height;
+	Tixing(double a,double b,double h){
+		above = a;
+		bottom = b;
+		height = h;
+	}
+	double getArea() {
+		return (above+bottom)*height/2;
+	}
+
+}
+
+package 练习;
+
+public class Student {
+	double computerArea(Circle c) {//是重载方法
+		double area = c.getArea();
+		return area;
+	}
+	double computerArea(Tixing t) {//是重载方法
+		double area = t.getArea();
+		return area;
+	}
+
+}
+
+package 练习;
+
+public class Example4_13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Circle circle = new Circle();
+		circle.setRadius(196.87);
+		Tixing lader = new Tixing(3,21,9);
+		Student zhang = new Student();
+		System.out.println("zhang计算圆的面积：");
+		double result = zhang.computerArea(circle);
+		System.out.println(result);
+		System.out.println("zhang计算梯形的面积：");
+		result = zhang.computerArea(lader);
+		System.out.println(result);
+	}
+
+}
