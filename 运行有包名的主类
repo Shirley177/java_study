@@ -1,0 +1,25 @@
+package tom.jiafei;
+
+public class Student {
+
+	int number;
+	Student(int n){
+		number = n;
+	}
+	void speak() {
+		System.out.println("Student类的包名是tom.jiafei,我的学号："+number);
+	}
+
+}
+
+package tom.jiafei;
+
+public class Example4_15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student stu = new Student(10201);
+		stu.speak();
+		System.out.println("主类的包名也是tom.jiafei");
+	}
+}
