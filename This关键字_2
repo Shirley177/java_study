@@ -1,0 +1,15 @@
+package 练习;
+
+public class B {
+	void f() {
+		this.g();   //一个实例方法调用另一个方法时可以省略方法名字前面的“this.”或类名
+		B.h();
+	}
+	void g() {
+		System.out.println("ok");
+	}
+	static void h() {
+		System.out.println("hello");    this不能出现在类方法中
+	}
+
+}
