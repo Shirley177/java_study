@@ -1,0 +1,22 @@
+package 练习;
+
+class Student{
+	int number;
+}
+
+public class 对象数组 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Student stu[]=new Student[10];			//创建对象数组stu
+		for(int i=0;i<stu.length;i++) {
+			stu[i] = new Student();				//创建Student对象stu[i]
+			stu[i].number = 101+i;
+		}
+		for(int i=0;i<stu.length;i++) {
+			System.out.print(" "+stu[i].number);
+		}
+	}
+
+}
