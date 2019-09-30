@@ -1,0 +1,29 @@
+package 练习;
+
+public class 遍历数组 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {1,2,3,4};
+		char b[]= {'a','b','c','d'};
+//		传统方式
+//		for(int n=0;n<a.length ;n++)
+//		{
+//			System.out.print(" "+a[n]);
+//		}
+//		for(int n=0;n<b.length ;n++)
+//		{
+//			System.out.print(" "+b[n]);
+//		}
+		for(int i:a)
+		{
+			System.out.print(" "+i);
+		}
+		System.out.println(" ");
+		for(char ch:b)
+		{
+			System.out.print(" "+ch);
+		}
+	}
+
+}
