@@ -1,0 +1,26 @@
+package 自动售票机;
+
+import java.util.Scanner;
+
+public class conversion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		初始化
+		Scanner reader =new Scanner(System.in);
+		System.out.print("请投币：");
+		int amount=reader.nextInt();
+		System.out.println(amount);
+		System.out.println(amount>=10);
+		if(amount>=10) {
+//		打印车票
+		System.out.println("****************");
+		System.out.println("* java城际铁路专线 *");
+		System.out.println("*  无指定座位票         *");
+		System.out.println("*  票价：10元           *");
+		System.out.println("****************");
+//		计算并找零
+		System.out.println("找零："+(amount-10));
+		}
+	}
+}
